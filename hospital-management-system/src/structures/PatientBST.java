@@ -49,10 +49,10 @@ public class PatientBST {
     
     private Patient searchHelper(Node node, int patientId) {
         if (node == null) {
-            return null; // not found
+            return null;
         }
         if (patientId == node.patient.getPatientId()) {
-            return node.patient; // found
+            return node.patient; 
         }
         if (patientId < node.patient.getPatientId()) {
             return searchHelper(node.left, patientId);
@@ -73,9 +73,9 @@ public class PatientBST {
     
     private void displayInOrderHelper(Node node) {
         if (node != null) {
-            displayInOrderHelper(node.left);  // left subtree
-            System.out.println(node.patient); // current node (toString)
-            displayInOrderHelper(node.right); // right subtree
+            displayInOrderHelper(node.left);  
+            System.out.println(node.patient); 
+            displayInOrderHelper(node.right); 
         }
     }
     
@@ -102,7 +102,7 @@ public class PatientBST {
                 return null;
             }
             
-            // Case 2: One child (left or right)
+            
             if (node.left == null) {
                 System.out.println("Patient deleted successfully!");
                 return node.right;
