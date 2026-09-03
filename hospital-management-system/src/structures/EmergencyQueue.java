@@ -34,7 +34,7 @@ public class EmergencyQueue {
         System.out.println("Patient added to emergency queue: " + patient.getName());
     }
     
-    //  DEQUEUE 
+    //  DEQUEUE -
     public Patient dequeue() {
         if (isEmpty()) {
             System.out.println("Emergency queue is empty! No patients waiting.");
