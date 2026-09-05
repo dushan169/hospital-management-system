@@ -1,11 +1,14 @@
 package model;
 
+import structures.VisitLinkedList;
+
 public class Patient {
     private int patientId;
     private String name;
     private int age;
     private String contactNumber;
     private String medicalCondition;
+    private VisitLinkedList visitHistory;
 
     // Constructor
     public Patient(int patientId, String name, int age, 
@@ -15,6 +18,7 @@ public class Patient {
         this.age = age;
         this.contactNumber = contactNumber;
         this.medicalCondition = medicalCondition;
+        this.visitHistory = new VisitLinkedList();
     }
 
     // Getters
@@ -23,6 +27,7 @@ public class Patient {
     public int getAge() { return age; }
     public String getContactNumber() { return contactNumber; }
     public String getMedicalCondition() { return medicalCondition; }
+    public VisitLinkedList getVisitHistory() { return visitHistory; }
 
     // Setters
     public void setPatientId(int patientId) { this.patientId = patientId; }
